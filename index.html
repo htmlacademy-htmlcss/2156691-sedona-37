@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -45,7 +46,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="button" href="#">
               <span class="visually-hidden">
                 Хочу сюда!
               </span>
@@ -56,10 +57,7 @@
     </header>
     <main class="main-index">
       <h1 class="visually-hidden">Город Седона</h1>
-      <img src="images/img-hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
-      <section class="divider">
-        <img src="images/divider.svg">
-      </section>
+      <img class="main-image" src="images/img-hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
       <section class="reasons">
         <h2 class="reasons-title">
           Седона — небольшой городок в Аризоне,заслуживающий большего!
@@ -68,7 +66,7 @@
           Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
         </p>
         <ul class="reasons-list">
-          <li class="reasons-item">
+          <li class="reasons-item-3">
             <h3 class="reasons-subtitle">
               Настоящий городок
             </h3>
@@ -77,11 +75,11 @@
             </p>
           </li>
           <li>
-            <img src="images/photo-1.jpg" width="800" height="385">
+            <img class="product-image" class="product-image" src="images/photo-1.jpg" width="800" height="385">
           </li>
         </ul>
         <ul>
-          <li class="reasons-item">
+          <li class="reasons-item-1">
             <h3 class="reasons-subtitle">
               Небольшая площадь
             </h3>
@@ -89,7 +87,7 @@
               Все достопримечательности находятся очень близко
             </p>
           </li>
-          <li class="reasons-item">
+          <li class="reasons-item-2">
             <h3 class="reasons-subtitle">
               Красивая дорога
             </h3>
@@ -97,7 +95,7 @@
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
-          <li class="reasons-item">
+          <li class="reasons-item-1">
             <h3 class="reasons-subtitle">
               Мало туристов
             </h3>
@@ -105,7 +103,7 @@
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
-          <li class="reasons-item">
+          <li class="reasons-item-3">
             <h3 class="reasons-subtitle">
               Там есть мост дьявола
             </h3>
@@ -114,7 +112,7 @@
             </p>
           </li>
           <li>
-            <img src="images/photo-2.jpg" width="800" height="385">
+            <img class="product-image" src="images/photo-2.jpg" width="800" height="385">
           </li>
         </ul>
       </section>
@@ -122,8 +120,8 @@
         <h2 class="advantages-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <p class="advantages-basic-text">Опытный персонал и качественное обслуживание!</p>
         <ul class="advantages-list">
-          <li class="advantages-item">
-            <img src="images/Advantage-icon-hotel.svg" width="75" height="72" alt="Иконка Жилье">
+          <li class="advantages-item-1">
+            <img class="product-image" src="images/Advantage-icon-hotel.svg" width="75" height="72" alt="Иконка Жилье">
             <h3 class="advantages-subtitle">
               Жилье
             </h3>
@@ -131,8 +129,8 @@
               Рекомендуем пожить в настоящем мотеле, всё как в кино!
             </p>
           </li>
-          <li class="advantages-item">
-            <img src="images/Advantage-icon-food.svg" width="75" height="72" alt="Иконка Еда">
+          <li class="advantages-item-2">
+            <img class="product-image" src="images/Advantage-icon-food.svg" width="75" height="72" alt="Иконка Еда">
             <h3 class="advantages-subtitle">
               Еда
             </h3>
@@ -140,8 +138,8 @@
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </li>
-          <li class="advantages-item">
-            <img src="images/Advantage-icon-gift.svg" width="75" height="72" alt="Иконка Сувениры">
+          <li class="advantages-item-1">
+            <img class="product-image" src="images/Advantage-icon-gift.svg" width="75" height="72" alt="Иконка Сувениры">
             <h3 class="advantages-subtitle">
               Сувениры
             </h3>
@@ -158,7 +156,7 @@
         <p class="cta-text-basic">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <a class="cta-button">
+        <a class="button">
           Поиск гостинницы в Седоне
         </a>
       </section>
@@ -171,7 +169,7 @@
         </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" placeholder="Ваш e-mail" required>
-          <button type="submit">
+          <button class="subscribe-button" type="submit">
             Подписаться
           </button>
         </form>
@@ -184,23 +182,23 @@
         <ul class="contacts-list">
           <li class="contacts-items">
             <a href="https://vk.com/htmlacademy">
-              <img src="images/social-vk.svg" width="48" height="40" alt="html academy in VK">
+              <img class="product-image" src="images/social-vk.svg" width="48" height="40" alt="html academy in VK">
             </a>
           </li>
           <li class="contacts-items">
             <a href="https://t.me/htmlacademy">
-              <img src="images/social-telegram.svg" width="48" height="40" alt="html academy in Telegram">
+              <img class="product-image" src="images/social-telegram.svg" width="48" height="40" alt="html academy in Telegram">
             </a>
           </li>
           <li class="contacts-items">
             <a href="https://www.youtube.com/user/htmlacademyru">
-              <img src="images/social-youtube.svg" width="48" height="40" alt="html academy in YouTube">
+              <img class="product-image" src="images/social-youtube.svg" width="48" height="40" alt="html academy in YouTube">
             </a>
           </li>
         </ul>
-        +7 (812) 812-12-12
+        <p class="phone">+7 (812) 812-12-12</p>
         <a href="https://htmlacademy.ru/">
-          <img src="images/Logo-html.svg" width="" height="" alt="html academy logo">
+          <img class="product-image" src="images/Logo-html.svg" width="" height="" alt="html academy logo">
         </a>
       </address>
     </footer>
