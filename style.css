@@ -30,12 +30,27 @@
   font-weight: 700;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
 }
 
 .main-inner {
@@ -44,6 +59,11 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
 }
 
 .button {
@@ -85,6 +105,22 @@ body {
   border-radius: 4px;
 }
 
+.catalog-products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1060px;
+}
+
+.catalog-products-wrap {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
 .product-card-image {
   margin: 20px;
 }
@@ -96,11 +132,70 @@ body {
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   text-decoration: none;
+  width: 340px;
+  height: 438px;
 }
 
 .product-card h3 {
   text-align: left;
   text-decoration: none;
+}
+
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+}
+
+.breadcrubs-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.header-bread {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-hotels {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+  width: 1060px;
+  margin: 0;
+}
+
+.catalog-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1060px;
+}
+
+.catalog-filter-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 370px;
+}
+
+.catalog-control-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 549px;
 }
 
 .pagination-item .pagination-current {
@@ -144,6 +239,29 @@ body {
 .page-header {
   color: #000000;
   background-color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  display: grid;
+  width: 339px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  margin-left: auto;
+}
+
+.main-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .navigation-link {
@@ -236,22 +354,44 @@ h4 {
 .cta {
   text-align: center;
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.reasons-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .reasons-item-1 {
+  margin: 0;
+  padding: 0;
   text-align: center;
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
 }
 
 .reasons-item-2 {
+  margin: 0;
+  padding: 0;
   text-align: center;
   background-color: rgba(131, 179, 211, 0.2);
+  width: 400px;
+  height: 385px;
 }
 
 .reasons-item-3 {
+  margin: 0;
+  padding: 0;
   text-align: center;
   color: #ffffff;
   background-color: rgba(130, 179, 211, 1);
+  width: 400px;
+  height: 385px;
 }
 
 .reasons-item-3 h3 {
@@ -266,19 +406,54 @@ h4 {
   background-size: 100% auto;
 }
 
+.advantages-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
 .advantages-item-1 {
+  margin: 0;
+  padding: 0;
   text-align: center;
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
 }
 
 .advantages-item-2 {
+  margin: 0;
+  padding: 0;
   text-align: center;
   background-color: white;
+  width: 400px;
+  height: 385px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
 
 .page-footer {
   color: #000000;
   background-color: #ffffff;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.contacts-list{
+  display: flex;
+  flex-direction: row;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1060px;
+  align-items: center;
 }
 
 .phone {
