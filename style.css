@@ -126,7 +126,8 @@ body {
 
 /* Кнопки */
 
-.button {
+.button > .search{
+  display: inline-block;
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
@@ -137,7 +138,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+  padding: 8px 50px;
+  cursor: pointer;
 }
+
 
 .button > .want {
   display: flex;
@@ -153,6 +157,72 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.button > .want:hover,
+.button > .search:hover,
+.buttons-more-like > .button-more:hover {
+  color: #ffffff;
+  background-color: #615048;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button > .want:focus,
+.button > .search:focus,
+.buttons-more-like > .button-more:focus {
+  color: #ffffff;
+  background-color: #615048;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button > .want:active,
+.button > .search:active,
+.buttons-more-like > .button-more:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*
+.navigation-link-header {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  font-size: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
+}
+
+.navigation-item-header:hover  .navigation-link-header{
+  border-bottom: 10px solid black;
+}
+*/
+
+.button > .want:disabled,
+.button > .search:disabled,
+.buttons-more-like > .button-more:disabled {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .button-like {
@@ -166,9 +236,39 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-like:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-like:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-like:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-like:disabled {
+  color: white;
+  background-color: #E5E5E5;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .subscribe-button {
+  display: inline-block;
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
@@ -176,10 +276,111 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #82B3D3;
+  border: none;
+  padding: 8px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.subscribe-button:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.subscribe-button:action {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
+}
+
+.subscribe-button:disabled {
+  color: white;
+  background-color: #E5E5E5;
+}
+
+.buttons-more-like > .button-like {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  border: none;
+  padding: 8px 20px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+  cursor: pointer;
 }
+
+.buttons-more-like > .button-more {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  border: none;
+  padding: 8px 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+}
+
+.card-grid-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px #E5E5E5 solid;
+  border-radius: 4px;
+}
+
+.card-grid-toggle:hover {
+  border: 2px #000 solid;
+  border-radius: 4px;
+}
+
+.card-grid-toggle:focus {
+  border: 2px #68A2CA solid;
+  border-radius: 4px;
+}
+
+.card-grid-toggle:active {
+  border: 2px #000 solid;
+  border-radius: 4px;
+}
+
+.card-grid-toggle-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px #000 solid;
+  border-radius: 4px;}
 
 /* Каталог */
 
@@ -214,7 +415,7 @@ body {
   width: 300px;
   height: auto;
   margin: 0;
-  object-fit: scale-down;
+
 }
 
 .product-card {
@@ -408,6 +609,7 @@ select {
 
 .sorting-buttons {
   display: flex;
+  gap: 8px;
 }
 
 .button-light {
@@ -513,6 +715,10 @@ select {
   list-style-type: none;
 }
 
+.navigation-item:active {
+
+}
+
 .main-index {
   background-image: url("images/index-background.jpg");
   background-color: #ffffff;
@@ -583,6 +789,16 @@ select {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
+}
+
+.cta-text-basic,
+.subscribe-text-basic {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  width: 592px;
+  padding-bottom: 54px;
 }
 
 /* Седона — небольшой городок в Аризоне,
@@ -758,6 +974,39 @@ select {
   height: 414px;
 }
 
+.subscribe-form {
+  display: flex;
+  width: 684px;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  border: none;
+}
+
+.subscribe-form .catalog {
+  display: flex;
+  width: 684px;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  border: none;
+}
+
+.subscribe-form input {
+  display: flex;
+  padding: 12px 20px;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  align-items: center;
+  gap: 260px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
 /* Пагинация */
 
 .pagination {
@@ -771,6 +1020,12 @@ select {
   list-style-type: none;
   text-decoration: none;
 }
+ /*
+.pagination-link {
+  color: white;
+  text-decoration: none;
+}
+*/
 
 .pagination-item .pagination-current {
   display: flex;
@@ -793,7 +1048,7 @@ select {
   text-decoration: none;
 }
 
-.pagination-item {
+.pagination-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -811,6 +1066,24 @@ select {
   text-transform: uppercase;
   border-radius: 4px;
   list-style-type: none;
+}
+
+.pagination-link:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+  border-radius: 4px;
+}
+
+.pagination-link:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+  border-radius: 4px;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
+  border-radius: 4px;
 }
 
 .pagination-item .pagination-hide {
@@ -850,9 +1123,22 @@ footer {
 }
 
 .contacts-list{
+  padding: 0;
   display: flex;
   flex-direction: row;
   list-style-type: none;
+}
+
+.contacts-link:hover .contact-image path {
+  fill: #68A2CA;
+}
+
+.contacts-link:focus .contact-image path {
+  fill: #68A2CA;
+}
+
+.contacts-link:active .contact-image path {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .contacts {
@@ -864,6 +1150,38 @@ footer {
   list-style-type: none;
 }
 
+.contact-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+}
+
+.logo-html-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+}
+
+.contacts-link:hover .logo-html-image path {
+  fill: #756157;
+}
+
+.contacts-link:focus .logo-html-image path {
+  fill: #756157;
+}
+
+.contacts-link:active .logo-html-image path {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .phone {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -872,4 +1190,16 @@ footer {
   font-weight: 400;
   text-decoration: none;
   color: #000000;
+}
+
+.phone:hover {
+  color: #756157;
+}
+
+.phone:focus {
+  color: #756157;
+}
+
+.phone:active {
+  color: rgba(117, 97, 87, 0.3);
 }
