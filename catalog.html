@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="container">
@@ -98,17 +114,23 @@
                     Инфраструктура:
                   </h4>
                 </legend>
-                <label class="control">
+                <label class="control custom-checkbox">
                   <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                    Бассейн
+                    <span>
+                      Бассейн
+                    </span>
                 </label>
-                <label class="control">
+                <label class="control custom-checkbox">
                   <input class="control-input" type="checkbox" name="parking" checked>
-                    Парковка
+                    <span>
+                      Парковка
+                    </span>
                 </label>
-                <label class="control">
+                <label class="control custom-checkbox">
                   <input class="control-input" type="checkbox" name="wifi">
-                    Wi-Fi
+                    <span>
+                      Wi-Fi
+                    </span>
                 </label>
               </fieldset>
               <fieldset class="catalog-filter-group">
@@ -117,20 +139,29 @@
                     Тип жилья:
                   </h4>
                 </legend>
-                <label class="control">
+                <label class="control custom-radio">
                   <input class="control-input" type="radio" name="swimming-pool" checked>
-                    Гостиница
+                    <span>
+                      Гостиница
+                    </span>
                 </label>
-                <label class="control">
+                <label class="control custom-radio">
                   <input class="control-input" type="radio" name="swimming-pool">
-                    Мотель
+                    <span>
+                      Мотель
+                    </span>
                 </label>
-                <label class="control">
+                <label class="control custom-radio">
                   <input class="control-input" type="radio" name="swimming-pool">
-                    Апартаменты
+                    <span>
+                      Апартаменты
+                    </span>
                 </label>
               </fieldset>
             </div>
+
+
+
             <div class="catalog-control-wrap">
               <div><fieldset class="catalog-filter-group">
                 <legend>
@@ -138,25 +169,36 @@
                     Стоимость, ₽:
                   </h4>
                 </legend>
-                <label class="control">
-                  <div class="range">
-                    <div class="range-slider">
-                      <span class="range-selected"></span>
-                    </div>
-                    <div class="range-price">
-                      <label for="min"></label>
-                      <input type="number" name="min" value="0">
-                      <label for="max"></label>
-                      <input type="number" name="max" value="700">
+                <div class="range">
+
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      от <input class="range-input" type="number" value="50" name="min-price">
+                    </label>
+                    <label class="catalog-filter-label">
+                      до <input class="range-input" type="number" value="1500" name="max-price" style="width: 37px">
+                    </label>
+                  </div>
+
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 42px; width: 136px">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
                     </div>
                   </div>
-                  <input class="control-input" type="range" name="cost-range" min="0" max="12000">
-                </label>
+
+                </div>
               </fieldset>
             </div>
-            <div>
-              <button type="submit">Применить</button>
-              <button type="reset">Сбросить</button>
+
+
+            <div class="apply-reset-buttons">
+              <button class="apply-button" type="submit">Применить</button>
+              <button class="reset-button" type="reset">Сбросить</button>
             </div>
           </div>
           </form>
@@ -205,11 +247,63 @@
                 <p class="product-card-price">От 4000 ₽</p>
               </div>
               <div class="buttons-more-like">
-                <a class="product-card-button button-more button" href="#">Подробнее</a>
+                <a class="product-card-button button-more" href="#">Подробнее</a>
                 <a class="product-card-button button-like" href="#">В избранное</a>
               </div>
               <div class="rate">
-                <p>rate</p>
+                <div class="rate-stars">
+                  <ul class="rate-stars-ul">
+                    <li>
+                      <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_83586_454)">
+                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_83586_454">
+                        <rect width="18" height="17" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_83586_454)">
+                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_83586_454">
+                        <rect width="18" height="17" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_83586_454)">
+                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_83586_454">
+                        <rect width="18" height="17" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_83586_454)">
+                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_83586_454">
+                        <rect width="18" height="17" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="rate-score">Рейтинг: 8,5</div>
               </div>
             </li>
             <li class="product-card">
@@ -228,7 +322,59 @@
               <a class="product-card-button button-like" href="#">В избранное</a>
             </div>
             <div class="rate">
-              <p>rate</p>
+              <div class="rate-stars">
+                <ul class="rate-stars-ul">
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="rate-score">Рейтинг: 9,2</div>
             </div>
             </li>
             <li class="product-card">
@@ -247,7 +393,47 @@
               <a class="product-card-button button-like" href="#">В избранное</a>
             </div>
             <div class="rate">
-              <p>rate</p>
+              <div class="rate-stars">
+                <ul class="rate-stars-ul">
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="rate-score">Рейтинг: 6,9</div>
             </div>
             </li>
             <li class="product-card">
@@ -266,11 +452,40 @@
               <a class="product-card-button button-like" href="#">В избранное</a>
             </div>
             <div class="rate">
-              <p>rate</p>
+              <div class="rate-stars">
+                <ul class="rate-stars-ul">
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83586_454)">
+                      <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_83586_454">
+                      <rect width="18" height="17" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="rate-score">Рейтинг: 5,0</div>
             </div>
             </li>
           </ul>
         </div>
+        <hr noshade style="border: 1px solid #E6E6E6; border-top: 0; width: 1060px; padding: 0; margin-top: 0; margin-bottom: 0;">
         <!-- Пагинация -->
         <ul class="pagination">
           <li class="pagination-item">
@@ -302,7 +517,7 @@
           Подпишитесь на рассылку
         </h2>
         <p class="subscribe-text-basic">
-          Только полезная информация и никакого спама, честное бойскаутское!
+          Только полезная информация и никакого спама,<br> честное бойскаутское!
         </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="catalog" type="email" placeholder="Ваш e-mail" required>
