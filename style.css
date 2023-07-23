@@ -66,53 +66,9 @@
 }
 */
 
-h1 {
-  color: #000000;
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 78px;
-  /* identical to box height, or 130% */
-}
-
-h2 {
-  color: #000000
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  /* or 120% */
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h3 {
-  color: #000000;
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  /* or 117% */
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h4 {
-  color: #000000;
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  /* identical to box height, or 120% */
-  text-transform: capitalize;
-}
-
-h1, h2, h3, h4, span, p {
+.regular-text {
   margin: 0;
+
 }
 
 /* Другое */
@@ -160,6 +116,19 @@ body {
 
 /* Кнопки */
 
+.search {
+  margin: 0;
+}
+
+.logo-sedona {
+  position: absolute;
+}
+
+.empty-logo {
+  width: 138px;
+  height: 64px;
+}
+
 .button > .search{
   display: inline-block;
   font-family: inherit;
@@ -179,6 +148,7 @@ body {
 
 .want {
   text-decoration: none;
+  margin: 0;
 }
 
 .button {
@@ -310,6 +280,55 @@ body {
   cursor: pointer;
 }
 
+
+
+
+
+.button-liked {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #7DB54F;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-liked:hover {
+  color: #ffffff;
+  background-color: #6C9E42;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-liked:focus {
+  color: #ffffff;
+  background-color: #6C9E42;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-liked:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #7DB54F;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-liked:disabled {
+  color: white;
+  background-color: #E5E5E5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
 .subscribe-button {
   display: inline-block;
   font-family: inherit;
@@ -324,6 +343,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+
 }
 
 .subscribe-button:hover {
@@ -355,6 +377,23 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #82B3D3;
+  border: none;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-more-like > .button-liked {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #7DB54F;
   border: none;
   padding: 8px 20px;
   text-decoration: none;
@@ -424,7 +463,8 @@ body {
   width: 48px;
   height: 48px;
   border: 2px #000 solid;
-  border-radius: 4px;}
+  border-radius: 4px;
+}
 
 /* Каталог */
 
@@ -459,7 +499,7 @@ body {
   width: 300px;
   height: auto;
   margin: 0;
-
+  object-fit: scale-down;
 }
 
 .product-card {
@@ -484,10 +524,17 @@ body {
 }
 
 .product-card-title {
+  color: #000000;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
   display: inline;
   text-align: left;
   text-decoration: none;
   text-transform: none;
+  margin: 0;
 }
 
 .type-price > p {
@@ -500,6 +547,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .rate-score {
@@ -542,6 +590,13 @@ body {
 }
 
 .inner-header-title {
+  color: #000000;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
   margin-bottom: 8px;
 }
 
@@ -614,8 +669,9 @@ body {
   position: relative;
   height: 4px;
   margin-bottom: 16px;
-  background-color: #242424;
+  background-color: #5F676C;
   border-radius: 2px;
+  margin-top: 36px;
 }
 
 .range-bar {
@@ -646,7 +702,7 @@ body {
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: #af7842;
+  background-color: white;
 }
 
 .range-toggle {
@@ -654,8 +710,8 @@ body {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border: 2px solid #242424;
-  border-radius: 50%;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
 }
 
@@ -679,13 +735,47 @@ body {
 }
 
 .range-input {
-  width: 30px;
+  display: flex;
+  width: 100%;
   padding: 0 2px;
   font: inherit;
-  text-align: center;
   background-color: transparent;
   border: none;
   appearance: textfield;
+  text-align: left;
+}
+
+.catalog-filter-label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 143px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+}
+
+.catalog-filter-label .from,
+.catalog-filter-label .to {
+  color: rgba(0, 0, 0, 0.3);
+  text-align: right;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.min-input {
+  display: flex;
+  align-items: flex-start;
+  width: 143px;
+  height: 48px;
+  background-color: white;
+  flex: 1 0 0;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -694,7 +784,17 @@ body {
   margin: 0;
 }
 
+.range-wrapper-inputs {
+  display: flex;
+  flex-direction: row;
+  width: 288px;
+  gap: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
+.cost-wrap {}
 
 
 
@@ -941,6 +1041,19 @@ body {
 
 /* Сортировка — найдено гостиниц */
 
+.select-title {
+  color: #000000
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  /* or 120% */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .select-wrap {
   display: flex;
   justify-content: space-between;
@@ -1039,9 +1152,22 @@ select {
   margin: 0 auto;
 }
 
+.navigation-point {
+  color: #000000;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+  text-transform: capitalize;
+  margin: 0;
+}
+
 .navigation-list {
   display: flex;
   margin: 0;
+  margin-left: 30px;
   padding: 0;
   list-style-type: none;
   flex-wrap: wrap;
@@ -1131,6 +1257,8 @@ select {
 .product-image {
   margin: 0;
   padding: 0;
+  max-width: 800px;
+  object-fit: scale-down;
 }
 
 .main-image {
@@ -1164,9 +1292,38 @@ select {
   padding: 0;
 }
 
+.reasons-subtitle,
+.advantages-subtitle {
+  color: #000000;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  /* or 117% */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.reasons-basic-text {
+  margin: 0;
+}
+
+.reasons-picture {
+  height: 385px;
+  margin: 0;
+  padding: 0;
+}
+
 .reasons-description,
 .advantages-description {
   width: 230px;
+  margin: 0;
+}
+
+.advantages-basic-text {
+  margin: 0;
 }
 
 .reasons-item-1 > p,
@@ -1201,12 +1358,29 @@ select {
   line-height: 26px;
   width: 592px;
   padding-bottom: 54px;
+  margin: 0;
 }
+
+.product-card-type,
+.product-card-price {
+  margin: 0;
+}
+
 
 /* Седона — небольшой городок в Аризоне,
 заслуживающий большего! */
 
 .reasons-title {
+  color: #000000
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  /* or 120% */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
   margin-bottom: 25px;
 }
 
@@ -1217,6 +1391,7 @@ select {
   padding: 0;
   text-align: center;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 
 .reasons-item-1 {
@@ -1278,9 +1453,6 @@ select {
 
 /* Приезжайте в Седону отдохнуть в комфорте и уюте! */
 
-.advantages-title {
-  margin-bottom: 20px;
-}
 
 .advantages-wrap {
   display: flex;
@@ -1336,7 +1508,18 @@ select {
 /* Заинтересовались? */
 
 .cta-title,
-.subscribe-title {
+.subscribe-title,
+.advantages-title {
+  color: #000000
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  /* or 120% */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -1511,16 +1694,14 @@ select {
 
 /* Футер */
 
-footer {
-  display: flex;
-  justify-content: center;
-}
 
 .page-footer {
+  display: flex;
+  justify-content: center;
   color: #000000;
   background-color: #ffffff;
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   height: 120px;
 }
 
@@ -1653,14 +1834,16 @@ footer {
 }
 
 .modal-title {
-  font-family: PT Sans;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px; /* 120% */
-  text-transform: uppercase;
   text-align: start;
   padding-bottom: 16px;
+  color: #000000
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .search-form .field-group {
@@ -1875,7 +2058,7 @@ footer {
   left: -128px;
   margin-bottom: 6px;
   display: none;
-
+margin: 0;
 }
 
 .tooltip-text:after {
@@ -1889,4 +2072,8 @@ footer {
   right:0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.form-label {
+  margin: 0;
 }
