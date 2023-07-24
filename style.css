@@ -1294,12 +1294,14 @@ select {
 
 .reasons-subtitle,
 .advantages-subtitle {
+  text-overflow: ellipsis;
   color: #000000;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  width: 175px;
   /* or 117% */
   text-align: center;
   text-transform: uppercase;
@@ -1371,6 +1373,7 @@ select {
 заслуживающий большего! */
 
 .reasons-title {
+  text-overflow: ellipsis;
   color: #000000
   font-family: 'PT Sans';
   font-style: normal;
@@ -1415,7 +1418,8 @@ select {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  height: 282px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .reasons-item-2 {
@@ -1461,7 +1465,8 @@ select {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  height: 246px;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 .advantages-list {
@@ -1530,7 +1535,8 @@ select {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  height: 406px;
+  margin-top: 96px;
+  margin-bottom: 96px;
 }
 
 /* Подпишитесь на рассылку */
@@ -1540,7 +1546,9 @@ select {
   color: #ffffff;
   background-color: #6691B1;
   background-image: url("images/Subscribe-2.png");
-  background-size: 100% auto;
+  background-size: cover;
+  object-fit: fill;
+  background-repeat: no-repeat;
 }
 
 .subscribe-catalog {
@@ -1556,7 +1564,8 @@ select {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  height: 414px;
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
 .subscribe-form {
